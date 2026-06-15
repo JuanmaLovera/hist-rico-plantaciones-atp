@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mapa Histórico de Plantaciones - ATP</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <div id="sidebar">
+    <h2>🌳 Mapa Histórico de Plantaciones</h2>
+    <h3>A Todo Pulmón Paraguay Respira</h3>
+
+    <div class="card">
+      <b>Sitios registrados:</b> <span id="totalRegistros">0</span><br>
+      <b>Árboles plantados:</b> <span id="totalArboles">0</span><br>
+      <b>Superficie:</b> <span id="totalHa">0</span> ha
+    </div>
+
+    <label>Actividad / Proyecto</label>
+    <select id="filtroActividad"><option value="">Todos</option></select>
+
+    <label>Año</label>
+    <select id="filtroAnio"><option value="">Todos</option></select>
+
+    <label>Departamento</label>
+    <select id="filtroDepartamento"><option value="">Todos</option></select>
+
+    <label>Distrito</label>
+    <select id="filtroDistrito"><option value="">Todos</option></select>
+
+    <label>Mapa base</label>
+    <select id="filtroMapaBase">
+      <option value="satellite">Satélite</option>
+      <option value="osm">OpenStreetMap</option>
+      <option value="topo">Topográfico</option>
+    </select>
+
+    <div id="leyenda"></div>
+  </div>
+
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
